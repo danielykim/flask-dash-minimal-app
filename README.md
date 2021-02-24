@@ -3,7 +3,7 @@ Clone this repository
 For development, run the following commands:
 
 ```zsh
-> FLASK_APP=application.py FLASK_ENV=development python application.py
+> FLASK_APP=application.py FLASK_ENV=development flask run
 ```
 
 In the development mode, the app is automatically reloaded if you modify the code.
