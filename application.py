@@ -1,13 +1,8 @@
-import io
-
-import plotly.graph_objects as go
-
 import dash
-
+import plotly.graph_objects as go
 from dash.dependencies import Input, Output
 from dash.exceptions import PreventUpdate
-
-from flask import Flask, send_file, request
+from flask import Flask
 
 import layout
 import config
@@ -40,7 +35,7 @@ dashapp.layout = layout.layout
 
 
 @dashapp.callback(
-    Output("graph", "figure"), 
+    Output("graph", "figure"),
     [Input("dropdown", "value")])
 def display_color(color):
     plotly_figure = go.Figure(
